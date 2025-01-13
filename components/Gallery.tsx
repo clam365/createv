@@ -18,7 +18,7 @@ export default function Gallery() {
 
     return (
         <>
-            <div className="flex gap-x-2 mt-16">
+            <div className="inline-flex flex-wrap gap-2 mt-16 justify-center m-auto">
                 {categories.map((category) => (
                     <div
                         key={category}
@@ -27,7 +27,7 @@ export default function Gallery() {
                             selectedCategory === category ? "bg-hoverOutline" : ""
                         }`}
                     >
-                        <h1>{category}</h1>
+                        <h1 className={"text-sm md:text-md"}>{category}</h1>
                     </div>
                 ))}
             </div>
@@ -35,7 +35,7 @@ export default function Gallery() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.35 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
                 {filteredResources.map((resource, index) => (
                     <GalleryComponent
                         key={index} // Use a unique identifier if available, like `resource.link`.
