@@ -98,7 +98,7 @@ const resources = [
         tag: "youtubers",
     },
     {
-        image: "brandfetch",
+        image: "brandfetch.png",
         link: "https://brandfetch.com/",
         title: "BrandFetch",
         description: "The internet’s source for logos and brand assets.",
@@ -112,7 +112,7 @@ const resources = [
         tag: "brand",
     },
     {
-        image: "https://www.free-mockup.com/#google_vignette",
+        image: "freemockup.png",
         link: "https://www.free-mockup.com/",
         title: "Free Mockup",
         description: "An extensive collection of free photorealistic Mockups online! Easily customizable PSD mockups ready for your projects and app presentations. Updates every day.",
