@@ -2,6 +2,7 @@
 import GalleryComponent from "@/components/GalleryComponent";
 import resources from "@/components/resources";
 import { useState } from "react";
+import {motion} from "framer-motion";
 
 export default function Gallery() {
     // state to track selected category
@@ -30,7 +31,11 @@ export default function Gallery() {
                     </div>
                 ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.35 }}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
                 {filteredResources.map((resource, index) => (
                     <GalleryComponent
                         key={index} // Use a unique identifier if available, like `resource.link`.
@@ -41,7 +46,7 @@ export default function Gallery() {
                         tag={resource.tag}
                     />
                 ))}
-            </div>
+            </motion.div>
         </>
     );
 }
